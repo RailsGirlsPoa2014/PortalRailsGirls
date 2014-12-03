@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @person.about %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= link_to 'Mantenha contato!', "http://#{@person.link}", { target: "blank" }  %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @person.project.name %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

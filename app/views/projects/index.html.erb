@@ -1,0 +1,12 @@
+<h1>Bem-vinda(o) ao Portal Rils Girls!</h1>
+
+<% @projects.each do |project| %>
+  <div>
+    <h3><%= link_to project.name, project %></h3>
+    <p>Esse projeto aconteceu no evento <%= project.event %></p>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to 'New Project', new_project_path, class: "btn btn-default" %>

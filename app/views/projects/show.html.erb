@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @project.name %></h1>
+<p><%= @project.event %></p>
+
+<h3>Participantes</h3>
+<% @project.person.each do |person|%>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= person.name %></h3>
+  </div>
+  
+  <div class="panel-body">
+    <p><%= person.about %></p>
+    <%= link_to 'Mantenha contato!', "http://#{person.link}", { target: "blank" }  %>
+  </div>
+  
+</div>
+<br>
+<% end %>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
